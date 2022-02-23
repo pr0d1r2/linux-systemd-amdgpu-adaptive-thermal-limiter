@@ -1,0 +1,11 @@
+[Unit]
+Description=AMD GPU adaptive thermal limiter
+
+[Service]
+User=root
+Restart=always
+RestartSec=60s
+ExecStart=/usr/bin/amdgpu_adaptive_thermal_limiter
+
+[Install]
+WantedBy=network-online.target
